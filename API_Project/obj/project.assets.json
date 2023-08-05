@@ -1239,6 +1239,19 @@
           }
         }
       },
+      "BusinessService.Layer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "DataAccess.Layer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BusinessService.Layer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BusinessService.Layer.dll": {}
+        }
+      },
       "DataAccess.Layer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -3923,6 +3936,11 @@
         "version.txt"
       ]
     },
+    "BusinessService.Layer/1.0.0": {
+      "type": "project",
+      "path": "../BusinessService.Layer/BusinessService.Layer.csproj",
+      "msbuildProject": "../BusinessService.Layer/BusinessService.Layer.csproj"
+    },
     "DataAccess.Layer/1.0.0": {
       "type": "project",
       "path": "../DataAccess.Layer/DataAccess.Layer.csproj",
@@ -3931,6 +3949,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "BusinessService.Layer >= 1.0.0",
       "DataAccess.Layer >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.9",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.9",
@@ -3944,11 +3963,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ibrah\\source\\repos\\API_Project\\API_Project.csproj",
+      "projectUniqueName": "C:\\Users\\ibrah\\source\\repos\\Monolithic_Architecture\\API_Project\\API_Project.csproj",
       "projectName": "API_Project",
-      "projectPath": "C:\\Users\\ibrah\\source\\repos\\API_Project\\API_Project.csproj",
+      "projectPath": "C:\\Users\\ibrah\\source\\repos\\Monolithic_Architecture\\API_Project\\API_Project.csproj",
       "packagesPath": "C:\\Users\\ibrah\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ibrah\\source\\repos\\API_Project\\obj\\",
+      "outputPath": "C:\\Users\\ibrah\\source\\repos\\Monolithic_Architecture\\API_Project\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ibrah\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3966,8 +3985,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\ibrah\\source\\repos\\DataAccess.Layer\\DataAccess.Layer.csproj": {
-              "projectPath": "C:\\Users\\ibrah\\source\\repos\\DataAccess.Layer\\DataAccess.Layer.csproj"
+            "C:\\Users\\ibrah\\source\\repos\\Monolithic_Architecture\\BusinessService.Layer\\BusinessService.Layer.csproj": {
+              "projectPath": "C:\\Users\\ibrah\\source\\repos\\Monolithic_Architecture\\BusinessService.Layer\\BusinessService.Layer.csproj"
+            },
+            "C:\\Users\\ibrah\\source\\repos\\Monolithic_Architecture\\DataAccess.Layer\\DataAccess.Layer.csproj": {
+              "projectPath": "C:\\Users\\ibrah\\source\\repos\\Monolithic_Architecture\\DataAccess.Layer\\DataAccess.Layer.csproj"
             }
           }
         }

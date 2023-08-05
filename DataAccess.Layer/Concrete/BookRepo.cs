@@ -27,10 +27,16 @@ namespace DataAccess.Layer.Concrete
 
         public async Task<Book> DeleteBook(int Id)
         {
-            _context.Books.ExecuteDeleteAsync();
-            await _context.SaveChangesAsync();
+            var deletebook = await _context.Books.FindAsync(Id);
 
-            return null;
+            if (deletebook != null)
+            {
+                _context.Books.Remove(deletebook);
+                await _context.SaveChangesAsync();
+                return null;
+            }
+            else throw new Exception("Book not found.");
+          
         }
 
         public async Task<Book> GetBook(int Id)

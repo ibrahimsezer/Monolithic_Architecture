@@ -3468,11 +3468,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ibrah\\source\\repos\\DataAccess.Layer\\DataAccess.Layer.csproj",
+      "projectUniqueName": "C:\\Users\\ibrah\\source\\repos\\Monolithic_Architecture\\DataAccess.Layer\\DataAccess.Layer.csproj",
       "projectName": "DataAccess.Layer",
-      "projectPath": "C:\\Users\\ibrah\\source\\repos\\DataAccess.Layer\\DataAccess.Layer.csproj",
+      "projectPath": "C:\\Users\\ibrah\\source\\repos\\Monolithic_Architecture\\DataAccess.Layer\\DataAccess.Layer.csproj",
       "packagesPath": "C:\\Users\\ibrah\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ibrah\\source\\repos\\DataAccess.Layer\\obj\\",
+      "outputPath": "C:\\Users\\ibrah\\source\\repos\\Monolithic_Architecture\\DataAccess.Layer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ibrah\\AppData\\Roaming\\NuGet\\NuGet.Config",
