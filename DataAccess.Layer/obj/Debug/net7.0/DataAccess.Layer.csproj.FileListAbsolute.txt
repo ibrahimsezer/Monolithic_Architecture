@@ -12,3 +12,17 @@ C:\Users\ibrah\source\repos\DataAccess.Layer\obj\Debug\net7.0\refint\DataAccess.
 C:\Users\ibrah\source\repos\DataAccess.Layer\obj\Debug\net7.0\DataAccess.Layer.pdb
 C:\Users\ibrah\source\repos\DataAccess.Layer\obj\Debug\net7.0\DataAccess.Layer.genruntimeconfig.cache
 C:\Users\ibrah\source\repos\DataAccess.Layer\obj\Debug\net7.0\ref\DataAccess.Layer.dll
+C:\Users\ibrah\source\repos\Monolithic_Architecture\DataAccess.Layer\bin\Debug\net7.0\DataAccess.Layer.deps.json
+C:\Users\ibrah\source\repos\Monolithic_Architecture\DataAccess.Layer\bin\Debug\net7.0\DataAccess.Layer.runtimeconfig.json
+C:\Users\ibrah\source\repos\Monolithic_Architecture\DataAccess.Layer\bin\Debug\net7.0\DataAccess.Layer.dll
+C:\Users\ibrah\source\repos\Monolithic_Architecture\DataAccess.Layer\bin\Debug\net7.0\DataAccess.Layer.pdb
+C:\Users\ibrah\source\repos\Monolithic_Architecture\DataAccess.Layer\obj\Debug\net7.0\DataAccess.Layer.csproj.AssemblyReference.cache
+C:\Users\ibrah\source\repos\Monolithic_Architecture\DataAccess.Layer\obj\Debug\net7.0\DataAccess.Layer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ibrah\source\repos\Monolithic_Architecture\DataAccess.Layer\obj\Debug\net7.0\DataAccess.Layer.AssemblyInfoInputs.cache
+C:\Users\ibrah\source\repos\Monolithic_Architecture\DataAccess.Layer\obj\Debug\net7.0\DataAccess.Layer.AssemblyInfo.cs
+C:\Users\ibrah\source\repos\Monolithic_Architecture\DataAccess.Layer\obj\Debug\net7.0\DataAccess.Layer.csproj.CoreCompileInputs.cache
+C:\Users\ibrah\source\repos\Monolithic_Architecture\DataAccess.Layer\obj\Debug\net7.0\DataAccess.Layer.dll
+C:\Users\ibrah\source\repos\Monolithic_Architecture\DataAccess.Layer\obj\Debug\net7.0\refint\DataAccess.Layer.dll
+C:\Users\ibrah\source\repos\Monolithic_Architecture\DataAccess.Layer\obj\Debug\net7.0\DataAccess.Layer.pdb
+C:\Users\ibrah\source\repos\Monolithic_Architecture\DataAccess.Layer\obj\Debug\net7.0\DataAccess.Layer.genruntimeconfig.cache
+C:\Users\ibrah\source\repos\Monolithic_Architecture\DataAccess.Layer\obj\Debug\net7.0\ref\DataAccess.Layer.dll
