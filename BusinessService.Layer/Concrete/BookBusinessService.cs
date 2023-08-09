@@ -14,6 +14,7 @@ public class BookBusinessService : IBookBusinessService
     {
         private readonly IBookRepo _bookBusinessService;
 
+
         public BookBusinessService(IBookRepo bookBusinessService)
         {
             _bookBusinessService = bookBusinessService;
@@ -21,19 +22,23 @@ public class BookBusinessService : IBookBusinessService
 
         public async Task<Book> CreateBook(Book book)
         {
-            var newbook = new Book()
-            {
-                Name = book.Name
-            };
+            var newbook = new Book();
+
+                newbook.Name = book.Name;
+                newbook.Authors = book.Authors;
+ 
+            
             return await _bookBusinessService.CreateBook(newbook);
         }
 
-        public Task<Book> DeleteBook(Book book)
+
+
+        public Task<Book> DeleteBook(int id)
         {
-            var deletebook = _bookBusinessService.GetBook(book.Id);
+            var deletebook = _bookBusinessService.GetBook(id);
             if (deletebook != null)
             {
-                _bookBusinessService.DeleteBook(book.Id);
+                _bookBusinessService.DeleteBook(deletebook.Id);
                 return null;
             }
             else throw new Exception("Book remove failed.");
@@ -42,8 +47,24 @@ public class BookBusinessService : IBookBusinessService
         public async Task<Book> GetBook(int id)
         {
             var book = await _bookBusinessService.GetBook(id);
-            if (book.Id == id) { return book; }
+            if (book != null) { return book; }
             else throw new Exception("Wrong book returned!");
         }
+
+        public async Task<Book> UpdateBook(Book book)
+        {
+            var updatebook = await _bookBusinessService.GetBook(book.Id);
+            if (updatebook.Id != null)
+            {
+                updatebook.Name = book.Name;
+                updatebook.Authors = book.Authors;
+                await _bookBusinessService.UpdateBook(book);
+
+                return updatebook;
+            }
+            else throw new Exception("Update error");
+        }
+
+ 
     }
 }

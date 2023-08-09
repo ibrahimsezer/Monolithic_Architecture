@@ -37,7 +37,6 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<DataAccess.Layer.DataAccess>();
 builder.Services.AddScoped<IBookRepo, BookRepo>();
 builder.Services.AddScoped<IAuthorRepo, AuthorRepo>();
-
 //Business Layer
 builder.Services.AddScoped<IBookBusinessService, BookBusinessService>();
 

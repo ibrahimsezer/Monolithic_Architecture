@@ -22,7 +22,7 @@ namespace DataAccess.Layer
             modelBuilder.Entity<Author>()
                 .HasMany(b => b.Books)
                 .WithOne(a => a.Authors)
-                .HasForeignKey(a => a.AuthorId);
+                .HasForeignKey( a => a.AuthorId);
 
             modelBuilder.Entity<Book>()
                  .HasData(new Book() { Id = 1, Name = "Gün olur asra bedel",AuthorId=1 },
