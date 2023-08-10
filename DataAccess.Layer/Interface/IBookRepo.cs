@@ -12,6 +12,6 @@ namespace DataAccess.Layer.Interface
         Task<Book> GetBook(int Id);
         Task<Book> CreateBook(Book book);
         Task<Book> DeleteBook(int Id);
-        Task<Book> UpdateBook (Book book);
+        Task<Book> UpdateBook (int id,Book book);
     }
 }

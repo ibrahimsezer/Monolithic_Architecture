@@ -17,7 +17,12 @@ namespace DataAccess.Layer.Concrete
         {
             _context = context;
         }
-
+        public async Task<Book> GetBook(int Id)
+        {
+            var book = await _context.Books.SingleAsync(x => x.Id == Id);
+            Console.WriteLine($"{book.Id} : {book.Name} ");
+            return book;
+        }
         public async Task<Book> CreateBook(Book book)
         {   Book book1 = new Book();
             book1.Name = book.Name;
@@ -27,10 +32,24 @@ namespace DataAccess.Layer.Concrete
             await _context.SaveChangesAsync();
             return book1;
         }
+        public async Task<Book> UpdateBook(int id, Book book)
+        {
+            var newbook = await _context.Books.FirstOrDefaultAsync(x => x.Id == book.Id);
+            if (newbook.Id == book.Id)
+            {
 
+                //newbook.Authors = book.Authors;
+                newbook.Name = book.Name;
+                await _context.SaveChangesAsync();
+                return newbook;
+            }
+            else throw new Exception("Error ID is null here.");
+
+        }
         public async Task<Book> DeleteBook(int Id)
         {
-            var deletebook = await _context.Books.FirstOrDefaultAsync(x=>x.Id==Id);
+            var deletebook = await _context.Books.FindAsync(Id);
+            Console.WriteLine($"{deletebook.Id}");
 
             if (deletebook != null)
             {
@@ -40,28 +59,6 @@ namespace DataAccess.Layer.Concrete
             }
             else throw new Exception("Book not found.");
           
-        }
-
-        public async Task<Book> GetBook(int Id)
-        {
-            var book =await _context.Books.FirstOrDefaultAsync(x => x.Id == Id);
-
-            return book;
-        }
-
-        public async Task<Book> UpdateBook(Book book)
-        {
-            var newbook = await _context.Books.FirstOrDefaultAsync(x => x.Id == book.Id);
-            if (newbook.Id == book.Id)
-            {
-                
-                newbook.Authors = book.Authors;
-                newbook.Name = book.Name;
-                await _context.SaveChangesAsync();
-                return newbook;
-            }
-            else throw new Exception("Error ID is null here.");
-
         }
     }
 }

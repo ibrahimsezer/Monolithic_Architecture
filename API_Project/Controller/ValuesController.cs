@@ -51,8 +51,8 @@ namespace API_Project.Controller
             return Ok(createbook);
         }
 
-        [HttpPut("{Id}")]
-        public async Task<IActionResult> UpdateBook([FromBody] Book book)
+        [HttpPut]
+        public async Task<IActionResult> UpdateBook(int id,[FromBody] Book book)
         {
             if (!ModelState.IsValid)
             {
@@ -60,12 +60,12 @@ namespace API_Project.Controller
                 return BadRequest(ModelState);
             }
 
-            var updatebook = await _bookBusinessService.UpdateBook(book);
+            var updatebook = await _bookBusinessService.UpdateBook(id,book);
             return Ok(updatebook);
 
         }
 
-        [HttpDelete("{Id:int}")]
+        [HttpDelete]
         public async Task<IActionResult> DeleteBook(int id)
         {
             if (!ModelState.IsValid)
@@ -74,7 +74,7 @@ namespace API_Project.Controller
                 return BadRequest(ModelState);
             }
             await _bookBusinessService.DeleteBook(id);
-            return Ok();
+            return NoContent();
         }
     }
 }
